@@ -10,12 +10,14 @@
 		14D41231956386A950E1DAC3 /* Pods_BaseNetworkSetupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846DCD93366738DE6D0F7262 /* Pods_BaseNetworkSetupTests.framework */; };
 		548A4775EE3B6E57818287A0 /* Pods_BaseNetworkSetupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263971C2AA86635614C39C5E /* Pods_BaseNetworkSetupUITests.framework */; };
 		63D51F1C1F67035A00BE8D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F1B1F67035A00BE8D12 /* AppDelegate.swift */; };
-		63D51F1E1F67035A00BE8D12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F1D1F67035A00BE8D12 /* ViewController.swift */; };
+		63D51F1E1F67035A00BE8D12 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F1D1F67035A00BE8D12 /* LoginViewController.swift */; };
 		63D51F211F67035A00BE8D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D51F1F1F67035A00BE8D12 /* Main.storyboard */; };
 		63D51F231F67035A00BE8D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D51F221F67035A00BE8D12 /* Assets.xcassets */; };
 		63D51F261F67035A00BE8D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D51F241F67035A00BE8D12 /* LaunchScreen.storyboard */; };
 		63D51F311F67035A00BE8D12 /* BaseNetworkSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F301F67035A00BE8D12 /* BaseNetworkSetupTests.swift */; };
 		63D51F3C1F67035A00BE8D12 /* BaseNetworkSetupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F3B1F67035A00BE8D12 /* BaseNetworkSetupUITests.swift */; };
+		A844DF121F67D84200B77174 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844DF111F67D84200B77174 /* LoginView.swift */; };
+		A844DF141F67DFB400B77174 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844DF131F67DFB400B77174 /* LoginPresenter.swift */; };
 		CD61265742DF2E4E6F5001BB /* Pods_BaseNetworkSetup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6877BE6BC467A0FDC0944037 /* Pods_BaseNetworkSetup.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +43,7 @@
 		4CA46BBAA83CF502A2ABA9E5 /* Pods-BaseNetworkSetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetup.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetup/Pods-BaseNetworkSetup.release.xcconfig"; sourceTree = "<group>"; };
 		63D51F181F67035A00BE8D12 /* BaseNetworkSetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseNetworkSetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D51F1B1F67035A00BE8D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63D51F1D1F67035A00BE8D12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63D51F1D1F67035A00BE8D12 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		63D51F201F67035A00BE8D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63D51F221F67035A00BE8D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63D51F251F67035A00BE8D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		7DEC6F220A009E5F75E0367C /* Pods-BaseNetworkSetupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetupUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetupUITests/Pods-BaseNetworkSetupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		84482DB9074CE25E9F89F6E7 /* Pods-BaseNetworkSetupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetupTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetupTests/Pods-BaseNetworkSetupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		846DCD93366738DE6D0F7262 /* Pods_BaseNetworkSetupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseNetworkSetupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A844DF111F67D84200B77174 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A844DF131F67DFB400B77174 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		C0D298F05CED56B971FF084B /* Pods-BaseNetworkSetupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetupTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetupTests/Pods-BaseNetworkSetupTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB2447B3C8B4375A4F4962F9 /* Pods-BaseNetworkSetupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetupUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetupUITests/Pods-BaseNetworkSetupUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,8 +141,10 @@
 		63D51F1A1F67035A00BE8D12 /* BaseNetworkSetup */ = {
 			isa = PBXGroup;
 			children = (
+				A844DF101F67D33A00B77174 /* view */,
+				A844DF0F1F67D2AB00B77174 /* presenter */,
 				63D51F1B1F67035A00BE8D12 /* AppDelegate.swift */,
-				63D51F1D1F67035A00BE8D12 /* ViewController.swift */,
+				63D51F1D1F67035A00BE8D12 /* LoginViewController.swift */,
 				63D51F1F1F67035A00BE8D12 /* Main.storyboard */,
 				63D51F221F67035A00BE8D12 /* Assets.xcassets */,
 				63D51F241F67035A00BE8D12 /* LaunchScreen.storyboard */,
@@ -163,6 +169,22 @@
 				63D51F3D1F67035A00BE8D12 /* Info.plist */,
 			);
 			path = BaseNetworkSetupUITests;
+			sourceTree = "<group>";
+		};
+		A844DF0F1F67D2AB00B77174 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A844DF131F67DFB400B77174 /* LoginPresenter.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		A844DF101F67D33A00B77174 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A844DF111F67D84200B77174 /* LoginView.swift */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +468,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D51F1E1F67035A00BE8D12 /* ViewController.swift in Sources */,
+				A844DF141F67DFB400B77174 /* LoginPresenter.swift in Sources */,
+				A844DF121F67D84200B77174 /* LoginView.swift in Sources */,
+				63D51F1E1F67035A00BE8D12 /* LoginViewController.swift in Sources */,
 				63D51F1C1F67035A00BE8D12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +724,7 @@
 				63D51F421F67035A00BE8D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63D51F431F67035A00BE8D12 /* Build configuration list for PBXNativeTarget "BaseNetworkSetupTests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +733,7 @@
 				63D51F451F67035A00BE8D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63D51F461F67035A00BE8D12 /* Build configuration list for PBXNativeTarget "BaseNetworkSetupUITests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +742,7 @@
 				63D51F481F67035A00BE8D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
