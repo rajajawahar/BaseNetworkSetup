@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 
@@ -17,7 +18,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self as LoginView)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         presenter.detachView()
+      
+        
     }
     
  
