@@ -7,6 +7,10 @@ target 'BaseNetworkSetup' do
 
   # Pods for BaseNetworkSetup
 
+
+   pod 'Alamofire'
+   pod 'SwiftyJSON'
+
   target 'BaseNetworkSetupTests' do
     inherit! :search_paths
     # Pods for testing
