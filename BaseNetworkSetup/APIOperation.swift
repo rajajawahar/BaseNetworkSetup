@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class APIOperation : Operation  {
+class APIOperation  {
     
     let method : Alamofire.HTTPMethod
     let params : [String: String]
@@ -27,11 +27,17 @@ class APIOperation : Operation  {
         self.urlString = urlString
         self.params = params
         self.callback = callback
-        super.init()
     }
     
     
-    override func start() {
+    convenience init(method: Alamofire.HTTPMethod,
+         urlString: String,
+        callback: @escaping (String?, JSON?) -> Void) {
+        self.init(method: method,urlString: urlString,params: [:],callback: callback)
+       
+    }
+    
+     func start() {
         let request = Alamofire.request(urlString, method: method, parameters: params)
         request.responseString( completionHandler: { (response) -> Void in
             switch response.result {

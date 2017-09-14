@@ -18,7 +18,6 @@
 		63D51F3C1F67035A00BE8D12 /* BaseNetworkSetupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F3B1F67035A00BE8D12 /* BaseNetworkSetupUITests.swift */; };
 		63D51F4A1F69B6D200BE8D12 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F491F69B6D200BE8D12 /* BaseViewController.swift */; };
 		A82FF7651F67EABB0084BDE2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FF7641F67EABB0084BDE2 /* APIManager.swift */; };
-		A82FF7671F67EC680084BDE2 /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FF7661F67EC680084BDE2 /* APIOperation.swift */; };
 		A844DF121F67D84200B77174 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844DF111F67D84200B77174 /* LoginView.swift */; };
 		A844DF141F67DFB400B77174 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844DF131F67DFB400B77174 /* LoginPresenter.swift */; };
 		A899F2061F69472000EE4BED /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899F2051F69472000EE4BED /* APIConstants.swift */; };
@@ -65,7 +64,6 @@
 		84482DB9074CE25E9F89F6E7 /* Pods-BaseNetworkSetupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetupTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetupTests/Pods-BaseNetworkSetupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		846DCD93366738DE6D0F7262 /* Pods_BaseNetworkSetupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseNetworkSetupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82FF7641F67EABB0084BDE2 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		A82FF7661F67EC680084BDE2 /* APIOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
 		A844DF111F67D84200B77174 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A844DF131F67DFB400B77174 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		A899F2051F69472000EE4BED /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				A82FF7641F67EABB0084BDE2 /* APIManager.swift */,
-				A82FF7661F67EC680084BDE2 /* APIOperation.swift */,
 				A899F2051F69472000EE4BED /* APIConstants.swift */,
 			);
 			name = apimanager;
@@ -497,7 +494,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A82FF7671F67EC680084BDE2 /* APIOperation.swift in Sources */,
 				A899F2061F69472000EE4BED /* APIConstants.swift in Sources */,
 				A844DF141F67DFB400B77174 /* LoginPresenter.swift in Sources */,
 				A844DF121F67D84200B77174 /* LoginView.swift in Sources */,
