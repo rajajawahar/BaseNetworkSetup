@@ -10,28 +10,29 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class APIOperation : NSObject  {
+class APIOperation : Operation  {
     
     let method : Alamofire.HTTPMethod
     let params : [String: String]
     let urlString : String
-    let callback : (String?, JSON?)
+    let callback : (String?, JSON?) -> Void
 
     
     
     init(method: Alamofire.HTTPMethod,
          urlString: String,
          params: [String: String],
-         callback : (String?, JSON?)) {
+         callback: @escaping (String?, JSON?) -> Void) {
         self.method = method
         self.urlString = urlString
         self.params = params
         self.callback = callback
+        super.init()
     }
     
     
-    func execute() -> (String?, JSON?){
-       let request = Alamofire.request(urlString, method: method, parameters: params)
+    override func start() {
+        let request = Alamofire.request(urlString, method: method, parameters: params)
         request.responseString( completionHandler: { (response) -> Void in
             switch response.result {
             case .success:
@@ -39,31 +40,33 @@ class APIOperation : NSObject  {
                 if let value = response.result.value {
                     if ( response.response!.statusCode >= 400 && response.response!.statusCode < 500) {
                         print(value)
-                        return callback(value, nil)
+                        self.callback(value, nil)
                     } else {
                         let json = JSON.init(parseJSON: value)
-                        return callback(nil, json)
+                        self.callback(nil, json)
                     }
                 } else {
-                    return callback("Error connecting to server", nil)
+                    self.callback("Error connecting to server", nil)
                 }
                 
             case .failure(let error):
                 NSLog("Failure \(error)")
                 if let errorStr = String(data: response.data!, encoding: String.Encoding.utf8) {
                     if errorStr.characters.count > 0 {
-                        return callback(errorStr, nil)
+                        self.callback(errorStr, nil)
                         NSLog(errorStr)
                     }
                     else {
-                       return callback(error.localizedDescription,nil)
+                        self.callback(error.localizedDescription,nil)
                     }
                 } else {
-                    return callback("Error Connecting to Server", nil)
+                    self.callback("Error Connecting to Server", nil)
                 }
             }
         })
     }
+
+    
     
     
 }

@@ -27,7 +27,7 @@ class APIManager   {
                                 urlString: String,
                                 params: [String: String],
                                 callback: @escaping (String?, JSON?) -> Void) -> Operation {
-        return APIOperation(method: method,urlString: urlString,params: params,callback:callback).execute()
+         return APIOperation(method: method,urlString: urlString,params: params,callback:callback)
         
     }
 }

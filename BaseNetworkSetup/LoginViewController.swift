@@ -11,7 +11,7 @@ import Alamofire
 
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
    let presenter = LoginPresenter()
     
@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         presenter.detachView()
-      
         
     }
     
