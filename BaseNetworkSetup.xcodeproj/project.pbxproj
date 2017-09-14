@@ -18,6 +18,8 @@
 		63D51F3C1F67035A00BE8D12 /* BaseNetworkSetupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F3B1F67035A00BE8D12 /* BaseNetworkSetupUITests.swift */; };
 		63D51F4A1F69B6D200BE8D12 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F491F69B6D200BE8D12 /* BaseViewController.swift */; };
 		A82FF7651F67EABB0084BDE2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FF7641F67EABB0084BDE2 /* APIManager.swift */; };
+		A84499791F6ABE7800B3F5C0 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84499781F6ABE7800B3F5C0 /* BasePresenter.swift */; };
+		A844997B1F6ABE9D00B3F5C0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844997A1F6ABE9D00B3F5C0 /* BaseView.swift */; };
 		A844DF121F67D84200B77174 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844DF111F67D84200B77174 /* LoginView.swift */; };
 		A844DF141F67DFB400B77174 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844DF131F67DFB400B77174 /* LoginPresenter.swift */; };
 		A899F2061F69472000EE4BED /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899F2051F69472000EE4BED /* APIConstants.swift */; };
@@ -64,6 +66,8 @@
 		84482DB9074CE25E9F89F6E7 /* Pods-BaseNetworkSetupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetupTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetupTests/Pods-BaseNetworkSetupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		846DCD93366738DE6D0F7262 /* Pods_BaseNetworkSetupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseNetworkSetupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82FF7641F67EABB0084BDE2 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		A84499781F6ABE7800B3F5C0 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		A844997A1F6ABE9D00B3F5C0 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		A844DF111F67D84200B77174 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A844DF131F67DFB400B77174 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		A899F2051F69472000EE4BED /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		63D51F1A1F67035A00BE8D12 /* BaseNetworkSetup */ = {
 			isa = PBXGroup;
 			children = (
+				A84499771F6ABE5F00B3F5C0 /* base */,
 				A82FF7631F67EA650084BDE2 /* apimanager */,
 				A82FF7621F67E8D40084BDE2 /* model */,
 				A844DF101F67D33A00B77174 /* view */,
@@ -157,7 +162,6 @@
 				63D51F221F67035A00BE8D12 /* Assets.xcassets */,
 				63D51F241F67035A00BE8D12 /* LaunchScreen.storyboard */,
 				63D51F271F67035A00BE8D12 /* Info.plist */,
-				63D51F491F69B6D200BE8D12 /* BaseViewController.swift */,
 			);
 			path = BaseNetworkSetup;
 			sourceTree = "<group>";
@@ -194,6 +198,16 @@
 				A899F2051F69472000EE4BED /* APIConstants.swift */,
 			);
 			name = apimanager;
+			sourceTree = "<group>";
+		};
+		A84499771F6ABE5F00B3F5C0 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				63D51F491F69B6D200BE8D12 /* BaseViewController.swift */,
+				A84499781F6ABE7800B3F5C0 /* BasePresenter.swift */,
+				A844997A1F6ABE9D00B3F5C0 /* BaseView.swift */,
+			);
+			name = base;
 			sourceTree = "<group>";
 		};
 		A844DF0F1F67D2AB00B77174 /* presenter */ = {
@@ -495,10 +509,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A899F2061F69472000EE4BED /* APIConstants.swift in Sources */,
+				A84499791F6ABE7800B3F5C0 /* BasePresenter.swift in Sources */,
 				A844DF141F67DFB400B77174 /* LoginPresenter.swift in Sources */,
 				A844DF121F67D84200B77174 /* LoginView.swift in Sources */,
 				A82FF7651F67EABB0084BDE2 /* APIManager.swift in Sources */,
 				63D51F4A1F69B6D200BE8D12 /* BaseViewController.swift in Sources */,
+				A844997B1F6ABE9D00B3F5C0 /* BaseView.swift in Sources */,
 				63D51F1E1F67035A00BE8D12 /* LoginViewController.swift in Sources */,
 				63D51F1C1F67035A00BE8D12 /* AppDelegate.swift in Sources */,
 			);

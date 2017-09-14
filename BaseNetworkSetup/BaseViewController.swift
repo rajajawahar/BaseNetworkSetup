@@ -20,9 +20,7 @@ class BaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    internal func navigate(navigationTitle : String, navBarcolor : UIColor,leftBarButtonColor : UIColor) {
-       
-    }
+   
     
     
    
