@@ -10,4 +10,14 @@ import Foundation
 
 protocol BaseView {
     
+    func showLoading()
+    
+    func hideLoading();
+    
+    func showRetry();
+    
+    func hideRetry();
+    
+    func showError(message : String)
+    
 }

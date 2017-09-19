@@ -10,6 +10,8 @@ target 'BaseNetworkSetup' do
 
    pod 'Alamofire'
    pod 'SwiftyJSON'
+   pod 'RxSwift' 
+    pod 'RxCocoa'
 
   target 'BaseNetworkSetupTests' do
     inherit! :search_paths

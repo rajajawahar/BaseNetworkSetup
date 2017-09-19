@@ -8,6 +8,14 @@
 
 import Foundation
 
-class BasePresenter {
+protocol BasePresenter  {
+    
+    associatedtype View
+    
+    func attachView(view : View)
+    
+    func detachView()
+    
+    func destroy()
     
 }

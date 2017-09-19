@@ -8,27 +8,29 @@
 
 import Foundation
 
-class LoginPresenter {
+class LoginPresenter : BasePresenter {
     
+
+    typealias View = LoginView
+
     var userView : LoginView?
     
-    func attachView(view :LoginView){
+    
+    func attachView(view: LoginView) {
         userView = view
     }
     
-    
     func detachView() {
-        userView = nil
+        
     }
     
-    
+    func destroy() {
+        
+    }
     init() {
 
     }
   
-    func signIn( )  {
-        
-      
-    }
+    
     
 }

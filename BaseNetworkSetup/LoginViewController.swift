@@ -18,7 +18,7 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self as LoginView)
-        presenter.signIn()
+        
     }
 
     override func didReceiveMemoryWarning() {
