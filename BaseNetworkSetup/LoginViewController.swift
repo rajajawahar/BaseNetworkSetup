@@ -15,9 +15,12 @@ class LoginViewController: BaseViewController {
     
    let presenter = LoginPresenter()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self as LoginView)
+        presenter.signIn(userName: "jodie@buildinghub.co.nz", password: "4Piglet5")
+
         
     }
 

@@ -31,6 +31,20 @@ class LoginPresenter : BasePresenter {
 
     }
   
+    func signIn(userName : String,password: String)  {
+        userView?.showLoading()
+        let params = ParamUtils.createLoginParams(username: userName,password: password)
+        APIManager.apiManager.login(params: params) { (error, response) in
+            self.userView?.hideLoading()
+            
+            let user = LoginResponse(json: response!)
+            print(user.user.company)
+        
+        }
+
+    
+
+    }
     
     
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		14D41231956386A950E1DAC3 /* Pods_BaseNetworkSetupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846DCD93366738DE6D0F7262 /* Pods_BaseNetworkSetupTests.framework */; };
 		548A4775EE3B6E57818287A0 /* Pods_BaseNetworkSetupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263971C2AA86635614C39C5E /* Pods_BaseNetworkSetupUITests.framework */; };
+		6301FE3E1F73BFDB00D92890 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301FE3D1F73BFDB00D92890 /* LoginResponse.swift */; };
+		6301FE411F73C5FC00D92890 /* ParamUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6301FE401F73C5FC00D92890 /* ParamUtils.swift */; };
 		63D51F1C1F67035A00BE8D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F1B1F67035A00BE8D12 /* AppDelegate.swift */; };
 		63D51F1E1F67035A00BE8D12 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D51F1D1F67035A00BE8D12 /* LoginViewController.swift */; };
 		63D51F211F67035A00BE8D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D51F1F1F67035A00BE8D12 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		263971C2AA86635614C39C5E /* Pods_BaseNetworkSetupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseNetworkSetupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA46BBAA83CF502A2ABA9E5 /* Pods-BaseNetworkSetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNetworkSetup.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNetworkSetup/Pods-BaseNetworkSetup.release.xcconfig"; sourceTree = "<group>"; };
+		6301FE3D1F73BFDB00D92890 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		6301FE401F73C5FC00D92890 /* ParamUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamUtils.swift; sourceTree = "<group>"; };
 		63D51F181F67035A00BE8D12 /* BaseNetworkSetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseNetworkSetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D51F1B1F67035A00BE8D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63D51F1D1F67035A00BE8D12 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6301FE3C1F73BFBA00D92890 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				6301FE3D1F73BFDB00D92890 /* LoginResponse.swift */,
+			);
+			name = dto;
+			sourceTree = "<group>";
+		};
+		6301FE3F1F73C5EB00D92890 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				6301FE401F73C5FC00D92890 /* ParamUtils.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
 		63D51F0F1F67035A00BE8D12 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +171,8 @@
 		63D51F1A1F67035A00BE8D12 /* BaseNetworkSetup */ = {
 			isa = PBXGroup;
 			children = (
+				6301FE3F1F73C5EB00D92890 /* utils */,
+				6301FE3C1F73BFBA00D92890 /* dto */,
 				A84499771F6ABE5F00B3F5C0 /* base */,
 				A82FF7631F67EA650084BDE2 /* apimanager */,
 				A82FF7621F67E8D40084BDE2 /* model */,
@@ -303,7 +325,7 @@
 				TargetAttributes = {
 					63D51F171F67035A00BE8D12 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2BYMZSV6E9;
+						DevelopmentTeam = 6Q3NYX4PQ5;
 						ProvisioningStyle = Automatic;
 					};
 					63D51F2B1F67035A00BE8D12 = {
@@ -508,10 +530,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6301FE411F73C5FC00D92890 /* ParamUtils.swift in Sources */,
 				A899F2061F69472000EE4BED /* APIConstants.swift in Sources */,
 				A84499791F6ABE7800B3F5C0 /* BasePresenter.swift in Sources */,
 				A844DF141F67DFB400B77174 /* LoginPresenter.swift in Sources */,
 				A844DF121F67D84200B77174 /* LoginView.swift in Sources */,
+				6301FE3E1F73BFDB00D92890 /* LoginResponse.swift in Sources */,
 				A82FF7651F67EABB0084BDE2 /* APIManager.swift in Sources */,
 				63D51F4A1F69B6D200BE8D12 /* BaseViewController.swift in Sources */,
 				A844997B1F6ABE9D00B3F5C0 /* BaseView.swift in Sources */,
@@ -671,7 +695,7 @@
 			baseConfigurationReference = 704706338899947F8977812E /* Pods-BaseNetworkSetup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2BYMZSV6E9;
+				DEVELOPMENT_TEAM = 6Q3NYX4PQ5;
 				INFOPLIST_FILE = BaseNetworkSetup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sedintehcnologies.BaseNetworkSetup;
@@ -685,7 +709,7 @@
 			baseConfigurationReference = 4CA46BBAA83CF502A2ABA9E5 /* Pods-BaseNetworkSetup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2BYMZSV6E9;
+				DEVELOPMENT_TEAM = 6Q3NYX4PQ5;
 				INFOPLIST_FILE = BaseNetworkSetup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sedintehcnologies.BaseNetworkSetup;

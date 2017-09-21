@@ -17,10 +17,10 @@ class APIManager : NSObject  {
      static let apiManager = APIManager()
 
     
-    func login(username: String,passwd: String,
+    func login(params: [String:String],
                callback: @escaping (String?, JSON?) -> Void)  {
-        let params: [String:String] = ["loginid":"~eq~"+username, "_format":"json", "_compact":"1"]
-        return callServer(.get, urlString: APIConstants.LOGIN_URL,
+    
+        return callServer(.post, urlString: APIConstants.SERVER,
                           params: params,callback: callback)
     }
     
@@ -33,7 +33,9 @@ class APIManager : NSObject  {
                                 urlString: String,
                                 params: [String: String],
                                 callback: @escaping (String?, JSON?) -> Void)  {
-        let request = Alamofire.request(urlString, method: method, parameters: params)
+        let header = ["Content-Type": "application/json"]
+
+        let request = Alamofire.request(urlString, method: method, parameters: params,encoding: JSONEncoding.default,headers:header)
         request.responseString( completionHandler: { (response) -> Void in
             switch response.result {
             case .success:
@@ -43,6 +45,7 @@ class APIManager : NSObject  {
                         print(value)
                         callback(value, nil)
                     } else {
+                        print(response)
                         let json = JSON.init(parseJSON: value)
                         callback(nil, json)
                     }

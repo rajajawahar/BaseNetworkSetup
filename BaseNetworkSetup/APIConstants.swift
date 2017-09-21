@@ -11,7 +11,7 @@ import Foundation
 class APIConstants {
     
     
-    static let SERVER = ""
+    static let SERVER = "http://buildinghub.railsfactory.com/api/v1/login"
     static let BASE_URL = "\(SERVER)"
     static let LOGIN_URL = "\(BASE_URL)"
 
