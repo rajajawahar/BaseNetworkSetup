@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class LoginPresenter : BasePresenter {
     
@@ -14,7 +15,8 @@ class LoginPresenter : BasePresenter {
     typealias View = LoginView
 
     var userView : LoginView?
-    
+    let disposeBag = DisposeBag()
+
     
     func attachView(view: LoginView) {
         userView = view
@@ -34,13 +36,17 @@ class LoginPresenter : BasePresenter {
     func signIn(userName : String,password: String)  {
         userView?.showLoading()
         let params = ParamUtils.createLoginParams(username: userName,password: password)
-        APIManager.apiManager.login(params: params) { (error, response) in
-            self.userView?.hideLoading()
-            
-            let user = LoginResponse(json: response!)
-            print(user.user.company)
+        APIManager.apiManager.loginWithRx(params: params).debug()
+            .subscribe(onNext: { (loginRespone) in
+                print(loginRespone.company)
+                print(loginRespone.email)
+                print(loginRespone.mobileNumber)
+        }, onError: { (error) in
+            print("onError")
+        }, onCompleted: {
+            print("onCompelete")
+            }).disposed(by: disposeBag)
         
-        }
 
     
 

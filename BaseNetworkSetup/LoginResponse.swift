@@ -24,7 +24,7 @@ struct LoginResponse {
         user = User(json: json["user"])
     }
     
-    struct User {
+    public struct User {
         var company : String
         var email : String
         var firstName : String
